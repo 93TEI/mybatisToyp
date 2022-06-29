@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.mybatistoyp.MEKDAO">
+<mapper namespace="com.example.mybatistoyp.MekDAO">
     <select id="selectUser" resultType="String">
-        select name from testTable where id = 1
+        select name
+        from testTable
+        order by id
+        DESC limit 1
     </select>
 
     <insert id="createUser">
-        insert into testTable (name,age) value ('MAN', 23)
+        insert into testTable (name,age) value (#{name}, 23)
     </insert>
 </mapper>

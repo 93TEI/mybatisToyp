@@ -3,9 +3,9 @@ package com.example.mybatistoyp;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface MEKDAO {
+public interface MekDAO {
 
     String selectUser();
 
-    void createUser();
+    void createUser(String name);
 }
